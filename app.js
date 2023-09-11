@@ -6,14 +6,14 @@ const port = process.env.PORT || 3000;
 
 app.get('/api', (req, res) => {
   const slackName = req.query.slack_name;
-  const track = req.query.track || 'Unknown';
+  const track = req.query.track || 'Backend';
 
   const currentDay = moment().format('dddd');
   const utcTime = moment().utc().format('YYYY-MM-DDTHH:mm:ss[Z]');
 
-  // Replace these URLs with your actual GitHub URLs
-  const githubFileUrl = 'https://github.com/username/repo/blob/main/file_name.ext';
-  const githubRepoUrl = 'https://github.com/username/repo';
+
+  const githubFileUrl = 'https://github.com/Onahi7/hngtask/blob/master/app.js';
+  const githubRepoUrl = 'https://github.com/Onahi7/hngtask';
 
   const response = {
     slack_name: slackName,
